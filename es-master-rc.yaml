@@ -49,6 +49,6 @@ spec:
       volumes:
           - glusterfs:
               endpoints: glusterfs-cluster
-              path: gvol
+              path: elasticsearch
               readOnly: false    
             name: "storage"
