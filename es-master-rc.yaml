@@ -24,7 +24,7 @@ spec:
           capabilities:
             add:
               - IPC_LOCK
-        image: jaohaohsuan/docker-elasticsearch-kubernetes:2.3.1-beta.3
+        image: jaohaohsuan/docker-elasticsearch-kubernetes:2.3.1-beta.4
         imagePullPolicy: Always
         env:
         - name: NAMESPACE
@@ -39,6 +39,8 @@ spec:
           value: "false"
         - name: HTTP_ENABLE
           value: "false"
+        - name: STT_TOKENIZER
+          value: "ik_smart"
         ports:
         - containerPort: 9300
           name: transport
